@@ -1,0 +1,511 @@
+/* Apply a universal margin and padding reset */
+*{
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+}
+body{
+    background-color: burlywood;
+    padding-top: 60px;
+
+}
+/*Nav bar*/
+.header{
+    position: fixed;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+/*logo*/
+.header .logo{
+    cursor: pointer;
+}
+.header .logo {
+    height: 75px;
+    width: 75px;
+    transition: all 0.3s;
+}
+.header .logo:hover{
+    transform: scale(1.2);
+}
+/*links*/
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.header .nav-links a{
+    font-size: 700;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    color: brown;
+    
+}
+.header .nav-links li:hover{
+    transform: scale(1.2);
+    color: brown;
+   
+}
+.header .nav-links li:hover a{
+    color: brown;
+}
+/*contact , menu mobil*/
+.menu{
+    display: none;
+}
+
+.header .btn,
+.header .menu button {
+    font-size: 700;
+    font-weight: 700;
+    color : brown;
+    padding: 9px 25px;
+    border :none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+
+}
+.header .btn:hover,
+.header .menu button:hover{
+    background: brown;
+    color: wheat;
+    transform: scale(1.2);
+}
+@media screen and (max-width: 800px) {
+    .header .nav-links{
+        display: none;
+    }
+    .header .btn{
+        display: none;
+    }
+    .header .menu{
+        display: block;
+       
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+}
+/*Nav bar mobile*/
+.header a{
+    text-decoration: none;
+
+}
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 205, 106, 0.9);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: center;
+   
+}
+.header .overlay .overlay-content a{
+    font-size: 30px;
+    color: brown;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: 700;
+
+}
+.header .overlay .overlay-content .nav-mobile{
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+    line-height: 1.5;
+
+}
+.header .overlay a:hover,.header .overlay a:focus{
+    color: wheat;
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    color: brown;
+    text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+    .header .nav-links{
+        display: none;
+    }
+    .header .btn{
+        display: none;
+    }
+    .header .menu{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .header .overlay{
+        width: 100%;
+    }
+    .header .overlay-content a{
+        font-size: 30px;
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    
+}
+
+/*background image and hero*/
+.hero {
+    height: 80vh;
+    width: 100vw;
+    background: url(img/captura.png) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero .hero-content{
+    position: relative;
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    
+}
+/**/
+.section {
+    background-color: wheat; /* Fondo oscuro */
+    padding: 20px 0;
+}
+
+.custom-borders-divider-style-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.custom-borders-divider-style-1 .col-lg-3 {
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria */
+    padding: 20px;
+}
+
+.custom-borders-divider-style-1 .col-lg-3:last-child {
+    border-right: none; /* Elimina la línea en el último */
+}
+
+.custom-borders-divider-style-1 a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: brown;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.custom-borders-divider-style-1 a i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Efecto hover */
+.custom-borders-divider-style-1 a:hover {
+    color: #1DB954; /* Verde Spotify */
+}
+
+.custom-spotify-hover-effect:hover { color: #1DB954; }
+.custom-itunes-hover-effect:hover { color: #FA57C1; }
+.custom-amazon-hover-effect:hover { color: #FF9900; }
+.custom-googlemusic-hover-effect:hover { color: #FF0000; }
+
+/* Quito los margenses para que la imagen se vea en toda la pantalla sin espacios en blanco */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor con la imagen de fondo */
+.contenedor-principal {
+    background-image: url('img/panaderia.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Esto hace que coja el 100% en cualquier pantalla*/
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+}
+
+/* Estilos del div en el que esta el formulario */
+.formulario-contacto {
+    background: rgba(255, 255, 255, 0.85); 
+    padding: 2.5rem; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Hace que tengan un espaciado para que se vea mejor */
+.grupo-formulario {
+    margin-bottom: 20px; 
+}
+
+/* Estilos de los imputs */
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: medium;
+    background: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box; 
+}
+
+
+/*Color para dentro del imput*/
+.texto1{
+    font-size: 18px;
+    color: #FFB3BA;
+    font-family: fantasy;
+    text-align: center;
+    padding: 8px;
+}
+.texto2{
+    font-size: 25px;
+    color: #BAE1FF;
+    font-family: initial;
+    text-align: center;
+    padding: 8px;
+}
+.texto3{
+    font-size: 18px;
+    color: #DCC6E0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 8px;
+}
+
+/*Color para los títulos que hay encima de los inputs*/
+.TitulInputs{
+    font-size: 25px;
+    color: #5a3921;
+    font-family: fantasy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lo siguiente ha sido sacado de distintos recurson de internet especificados mas abajo */
+
+
+
+
+
+
+/* Estilo del título del formulario encontrado de el recurso de tutulos plantillashtmlgratis.com */
+.formulario-contacto h2 {
+    margin-top: 0;
+    color: #5a3921;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.formulario-contacto h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #d2691e, #f4a460);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.formulario-contacto h2:hover::after {
+    width: 120px;
+    background: linear-gradient(90deg, #f4a460, #d2691e);
+}
+
+.formulario-contacto h2 {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1), 
+                 3px 3px 5px rgba(0,0,0,0.05);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario-contacto h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .formulario-contacto h2::after {
+        height: 3px;
+        width: 60px;
+    }
+    
+    .formulario-contacto h2:hover::after {
+        width: 80px;
+    }
+}
+
+/* Estilos del botón de enviar del recurso: cssbuttons.io */
+button {
+    background: #ffe06e;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1d0ac;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #8b4513;
+}
+
+.galeria {
+    text-align: center;
+}
+
+.galeria img {
+    margin: 10px;
+    width: 200px;
+    height: 150px;
+    
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+  
+section {
+    margin-bottom: 50px;
+}
+
+.botones-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botones-filtro button {
+    background-color: #deb887;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botones-filtro button:hover {
+    background-color: #c79e6d;
+}
+
+.seccion {
+    display: none;
+}
+
+.seccion.activa {
+    display: block;
+}              
+
+#SobreNosotros{
+    background-color: grey;
+    padding-left: 30px;
+    margin-left: 30px;
+}
